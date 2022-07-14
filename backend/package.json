@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "build:watch": "rm -rf dist && tsc -w",
+    "dev": "tsc-watch --onSuccess 'node dist/index.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Volpato",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/koa": "^2.13.5",
+    "@types/koa__router": "^8.0.11",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/node": "^18.0.4",
+    "ts-node": "^10.9.1",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@koa/router": "^11.0.1",
+    "@types/koa-logger": "^3.1.2",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-logger": "^3.2.1"
+  }
+}
