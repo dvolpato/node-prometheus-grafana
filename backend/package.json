@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "build:watch": "rm -rf dist && tsc -w",
-    "dev": "tsc-watch --onSuccess 'node dist/index.js'",
+    "dev": "tsc-watch --onSuccess 'node -r dotenv/config dist/index.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Volpato",
@@ -23,6 +23,7 @@
   "dependencies": {
     "@koa/router": "^11.0.1",
     "@types/koa-logger": "^3.1.2",
+    "dotenv": "^16.0.1",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
