@@ -6,9 +6,20 @@ rule_files:
   - alert.yml
 
 scrape_configs:
-  - job_name: services
+  - job_name: backend
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'backend:3000'
+
+  - job_name: prometheus
     metrics_path: /metrics
     static_configs:
       - targets:
           - 'prometheus:9090'
-          - 'idonotexists:564'
+
+  - job_name: invalid
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'i_do_not_exist:564'
