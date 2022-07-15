@@ -9,3 +9,15 @@ services:
     ports:
       - "3000:3000"
     #env_file: ./env
+
+  prometheus:
+    image: prom/prometheus:v2.30.3
+    ports:
+      - 9000:9090
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+
+volumes:
+  prometheus-data:
