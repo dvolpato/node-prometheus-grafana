@@ -1,13 +1,5 @@
-import * as client from "prom-client";
+import { koaMiddleware } from "prometheus-api-metrics";
 
-const register = new client.Registry();
-register.setDefaultLabels({
-  app: "node-prom-grafana-poc",
-});
+const metrics = koaMiddleware();
 
-client.collectDefaultMetrics({
-  prefix: "backend_",
-  register
-});
-
-export default register;
+export default metrics;

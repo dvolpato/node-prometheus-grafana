@@ -27,6 +27,7 @@
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
-    "prom-client": "^14.0.1"
+    "prom-client": "^14.0.1",
+    "prometheus-api-metrics": "^3.2.2"
   }
 }

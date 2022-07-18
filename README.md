@@ -2,11 +2,7 @@
 
 A PoC for monitoring a Node.js system with Prometheus on Grafana.
 
-Main branch collects default metrics only.
-
-See branches for automatically collecting stats on HTTP requests:
-* [branch](https://github.com/dvolpato/node-prometheus-grafana/tree/prometheus-api-metrics) for [prometheus-api-metrics](https://www.npmjs.com/package/prometheus-api-metrics) package
-* [branch](https://github.com/dvolpato/node-prometheus-grafana/tree/express-prom-bundle) for [express-prom-bundle](https://www.npmjs.com/package/express-prom-bundle) package
+Uses package [prometheus-api-metrics](https://www.npmjs.com/package/prometheus-api-metrics) for automatically collecting stats on routes.
 
 ## Running
 
@@ -24,7 +20,7 @@ This starts:
 * Prometheus at http://localhost:9000/
 * Grafana at http://localhost:3100/
 
-To test metrics:
+To test metrics, hit the following endpoints:
 
 ```bash
 curl localhost:3000/
