@@ -1,13 +1,11 @@
-import * as client from "prom-client";
+import promBundle from "express-prom-bundle";
 
-const register = new client.Registry();
-register.setDefaultLabels({
-  app: "node-prom-grafana-poc",
+const metricsMiddleware = promBundle({
+  includeMethod: true,
+  includePath: true,
+  promClient: {
+    collectDefaultMetrics: { }
+  }
 });
 
-client.collectDefaultMetrics({
-  prefix: "backend_",
-  register
-});
-
-export default register;
+export default metricsMiddleware;

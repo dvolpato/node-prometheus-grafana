@@ -24,8 +24,10 @@
     "@koa/router": "^11.0.1",
     "@types/koa-logger": "^3.1.2",
     "dotenv": "^16.0.1",
+    "express-prom-bundle": "^6.5.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
+    "koa-connect": "^2.1.0",
     "koa-logger": "^3.2.1",
     "prom-client": "^14.0.1"
   }
